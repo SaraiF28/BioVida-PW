@@ -1,3 +1,6 @@
+<!-- SARAI FREGOZO ARÉCHIGA !-->
+<!-- MARTIN GUADALUPE RUIZ MUÑOZ !-->
+<!-- DIEGO ARMANDO MERCADO ACERO !-->
 @extends('/plantilla/layoutAuth')
 
 @section('titulo', '- Registro de Productos')

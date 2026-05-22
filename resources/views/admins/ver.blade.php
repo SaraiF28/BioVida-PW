@@ -1,5 +1,7 @@
 @extends('/plantilla/layout')
-
+<!-- SARAI FREGOZO ARÉCHIGA !-->
+<!-- MARTIN GUADALUPE RUIZ MUÑOZ !-->
+<!-- DIEGO ARMANDO MERCADO ACERO !-->
 {{-- Colocar una seccion por cada yiel agregado en la plantilla --}}
 
 {{-- section para titulo, este solo el texto, NO REQUIERE el endsection --}}

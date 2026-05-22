@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- SARAI FREGOZO ARÉCHIGA !-->
+<!-- MARTIN GUADALUPE RUIZ MUÑOZ !-->
+<!-- DIEGO ARMANDO MERCADO ACERO !-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

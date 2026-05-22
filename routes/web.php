@@ -1,17 +1,42 @@
 <?php
-
+// SARAI FREGOZO ARÉCHIGA
+// MARTIN GUADALUPE RUIZ MUÑOZ
+// DIEGO ARMANDO MERCADO ACERO
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdministradoresController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ClientesController;
+use Illuminate\Support\Facades\Storage;
+
+
+// Ruta toggle: alterna storage/app/defaced entre 0 y 1 (solo local)
+Route::get('/toggle-deface', function () {
+    if (! app()->environment('local')) {
+        abort(403, 'Solo disponible en entorno local.');
+    }
+
+    $flagPath = storage_path('app/defaced');
+
+    // Crear carpeta si no existe
+    if (! file_exists(dirname($flagPath))) {
+        mkdir(dirname($flagPath), 0755, true);
+    }
+
+    $current = file_exists($flagPath) ? trim(file_get_contents($flagPath)) : '0';
+    $new = $current === '1' ? '0' : '1';
+    file_put_contents($flagPath, $new);
+   
+});
+
+
 
 // Route::get('/', function () {
  //return view('welcome');
 //});
 
-// Route::view('/', 'admins.login');
+Route::view('/admins', 'admins.login');
 
 //vista princiapal
 Route::view('/', 'index');
@@ -30,34 +55,7 @@ Route::view('/promotions', 'preview.promotions');
 
 Route::view('/help', 'preview.help');
 
-// //vista login
-// Route::get('/loginAdmin', [AdministradoresController::class, 'login'])->name('login'); // Página de login si no está autenticado
-// Route::post('/administradores/in', [AdministradoresController::class, 'in']); // Enviar formulario de login
-// Route::middleware('auth:admins')->group(function(){
-// //Sarai
-// // Rutas de vista
-// Route::view('/panel', 'plantilla.layoutAuth'); // Página principal del panel
-// Route::view('/registro', 'admins.registro'); // Página de registro de administradores
-// // Route::view('/lista', 'admins.lista'); // Página de lista de administradores
-// Route::get('/lista', [AdministradoresController::class, 'lista']);
-
-
-// // Rutas de autenticación
-// //Route::post('/administradores/in', [AdministradoresController::class, 'in']); // Enviar formulario de login
-// Route::post('/administradores/out', [AdministradoresController::class, 'out']); // Cerrar sesión (logout)
-// //Route::get('/', [AdministradoresController::class, 'login'])->name('login'); // Página de login si no está autenticado
-
-// //Sarai - Administradores 
-// Route::get('/administradores/lista',[AdministradoresController::class,'lista']);
-// Route::get('/administradores/registro',[AdministradoresController::class,'registro']);
-// Route::post('/administradores/guardar',[AdministradoresController::class,'guardar']);
-// Route::get('/administradores/{id}/editar',[AdministradoresController::class,'editar']);
-// Route::post('/administradores/{id}/actualizar',[AdministradoresController::class,'actualizar']);
-// Route::get('/administradores/{id}/mostrar',[AdministradoresController::class,'mostrar']);
-// Route::post('/administradores/{id}/borrar',[AdministradoresController::class,'borrar']);
-// });
-
-
+//Route::view('/', 'defaced');
 
 //Rutas de CLIENTES
 Route::get('/login', [ClientesController::class, 'login'])->name('login'); // Página de login si no está autenticado
@@ -116,10 +114,6 @@ Route::post('cart/removeItem',[CartController::class,'removeItem'])->name('remov
 
 //pedidos
 Route::get('pedidos/listaPedidos',[CartController::class,'hacerPedido'])->name('hacerPedido');
-
-
-
-
 
 //Martin - proveedores y productos.
 Route::get('/listaProveedores', [ProveedorController::class, 'listaProveedores']);

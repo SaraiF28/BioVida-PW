@@ -23,9 +23,7 @@
                 ¡Compra más de $1000 en productos y llévate una bolsa de caucho gratis con envío incluido!
             </h1>
             <p class="mb-6 text-gray-500 dark:text-gray-400">Producto reciclable hecho completamente con manos artesanas mexicanas.</p>
-            <a href="{{ url('/products') }}" class="inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Pre-order now
-            </a>
+           
         </div>
     </div>
 </section>
@@ -40,12 +38,10 @@
             <p class="mb-4 max-w-2xl text-gray-500 dark:text-gray-400 md:mb-12 md:text-lg lg:mb-5 lg:text-xl">
                 No esperes más — ¡Aprovecha un 20% de descuento en productos seleccionados y ahorra en grande!
             </p>
-            <a href="{{ url('/catalagoProd') }}" class="inline-block rounded-lg bg-primary-700 px-6 py-3.5 text-center font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                Shop Now
-            </a>
+           
         </div>
         <div class="hidden md:col-span-5 md:mt-0 md:flex">
-            <img class="dark:hidden" src="/imagenes/20.jpg" alt="20% de descuento" />
+            <img class="dark:hidden" src="/imagenes/descuento.jpg" alt="20% de descuento" />
             {{-- <img class="hidden dark:block" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/girl-shopping-list-dark.svg" alt="shopping illustration dark" /> --}}
         </div>
     </div>

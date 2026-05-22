@@ -136,7 +136,7 @@
 
 
 
-     <script src="../path/to/src/pagedone.js"></script>
+    <script src="../path/to/src/pagedone.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <script src="/js/botoncont.js"></script>

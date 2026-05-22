@@ -1,3 +1,7 @@
+<!-- SARAI FREGOZO ARÉCHIGA !-->
+<!-- MARTIN GUADALUPE RUIZ MUÑOZ !-->
+<!-- DIEGO ARMANDO MERCADO ACERO !-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -196,6 +200,8 @@
                     <ul>
                          <li class="mb-2"><a href="{{ url('/faq') }}" class="hover:text-green-500">FAQs</a></li>
                     </ul>
+                     <ul class="text-sm  transition-all duration-500">
+                    
                 </div>
             </div>
 
